@@ -1,0 +1,27 @@
+== multiple ways of routing into a specific route. 
+    * Template -> routerLink directive [routerLink="/login"]
+    * Programmatic -> this.router.navigate(['/login'])
+== lazy Loading
+    * To Reduce the initial Bundle size and improve performance.
+    * First root bundle loads and then on Route match the lazy loading happens and component renders
+== Standalone Components.
+    * Component are not standalone by default. 
+    * Component cannot exist without a ng module in previous version, from angular 15+ standalone is introduced.
+    * a standalone component can exist without and module 
+    * a standalone component can import dependencies on own.
+    * can be routed directly to the component.
+== Angular Gaurds.
+    * ROuting decides to route to the specific path or component.
+    * but gaurd decides whether to route to that path or component
+    * Mainly used for Authentication, Authorization (Roles) 
+    * Types of Gaurds
+      - Can Activate 
+      - can match
+      - can deactivate
+      - resolve
+      - can load (legacy) -> replaced by canMatch
+      Modern angular uses Function Based gaurds not the old way like class Based 
+    * Can Match is recommended because it is more efficient because it runs before lazy loading.
+    * can activate will load the module but doesnt route, but can match will not even load module if gaurd is not satisfied.
+    * 
+    

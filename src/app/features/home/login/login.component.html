@@ -1,0 +1,17 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input formControlName="username" type="text" id="username" name="username" >
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input formControlName="password" type="password" id="password" name="password">
+    </div>
+    <div class="form-actions">
+      <button type="submit" (click)="onSubmit($event)">Login</button>
+      <button type="button">Register</button>
+    </div>
+  </form>
+</div>
