@@ -22,7 +22,7 @@ export class AuthService {
   
   login(username: string, password: string){
     this.SessionStorage.setAuthToken('e2dksd8adhyuiouqkk893rhjk');
-    this.SessionStorage.setExpiry(new Date().getTime() + 3000);
+    this.SessionStorage.setExpiry(new Date().getTime() + 300000);
     this.startAutoLogout();
   }
   logout(): void {
