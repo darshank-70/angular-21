@@ -10,4 +10,11 @@ export class UserService {
     fetchAllUsers(){
         return this.http.get<{ users: User[]}>('https://dummyjson.com/users');
     }
+    searchUsers(search: string){
+        return this.http.get<{users: User[]}>('https://dummyjson.com/users',{
+            params: {
+                search
+            }
+        })
+    }
 }

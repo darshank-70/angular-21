@@ -1,9 +1,12 @@
 <div>
+    <input type="text" [formControl]="searchControl" placeholder="seach here"/>
     <button (click)="logout()">Logout </button>
     <button (click)="fetchAllUsers()">{{isLoading() ? 'Loading Data' : "Fetch Users"}}</button>
+    <button (click)="fetchUsersAgeAbove20()">> 20 Age people</button>
     @if(usersList().length){
         @for(user of usersList(); track user.id) {
             <div> {{user.id}} {{user.firstName}} <span class="user-age">age: {{user.age}}</span></div>
         }
     }
+    
 </div>
